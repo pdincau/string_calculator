@@ -1,4 +1,6 @@
 StringCalculator
 ================
 
-** TODO: Add description **
+To run tests:
+
+    mix test
