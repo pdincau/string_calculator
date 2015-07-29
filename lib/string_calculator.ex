@@ -1,7 +1,16 @@
 defmodule StringCalculator do
 
+  def add("//" <> rest) do
+    [custom_delimiter| [string]] = String.split(rest, ["\n"])
+    add(string, [custom_delimiter])
+  end
+
   def add(string) do
-    string |> String.split(["\n", ","]) |> sum
+    string |> add(["\n", ","])
+  end
+
+  defp add(string, delimiters) do
+    string |> String.split(delimiters) |> sum
   end
 
   defp sum([""]), do: 0

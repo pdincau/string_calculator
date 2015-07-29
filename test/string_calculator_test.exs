@@ -21,4 +21,8 @@ defmodule StringCalculatorTest do
     assert 1+2+3 == StringCalculator.add("1\n2,3")
   end
 
+  test "//;\n1;2 is 3" do
+    assert 1+2 == StringCalculator.add("//;\n1;2")
+  end
+
 end
